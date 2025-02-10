@@ -11,3 +11,8 @@ Basically I just wanted to know if there exists a tool where I can host my markd
 # Author
 
 [Akshat Mittal](https://akshatmittal61.vercel.app)
+
+# Index
+
+[Introduction](./introduction.md)
+[Moodboard](./Moodboard.md)

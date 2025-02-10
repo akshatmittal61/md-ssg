@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+.vscode/
+.obsidian/
+.idea/
+node_modules/
+target/
+build/
+dist/
+*.env
+gi
