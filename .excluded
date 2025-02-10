@@ -1,0 +1,10 @@
+.git
+.gitignore
+Personal
+.excluded
+*.sh
+*.txt
+*.py
+*.yml
+docs/
+Dockerfile

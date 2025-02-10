@@ -1,5 +1,5 @@
 site_name: My Obsidian
-docs_dir: ./Study Material
+docs_dir: docs/
 theme:
   name: material
   features:
@@ -11,21 +11,7 @@ repo_url: https://github.com/akshatmittal61/md-ssg/
 repo_name: md-ssg
 use_directory_urls: true
 markdown_extensions:
-  - pymdownx.arithmatex
-  - smarty
+- pymdownx.arithmatex
+- smarty
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-nav:
-- Python:
-  - Advanced:
-    - API Calls: Python/Advanced/API Calls.md
-    - Exception Handling: Python/Advanced/Exception Handling.md
-    - Using SQL with Python: Python/Advanced/Using SQL with Python.md
-  - Conditional Statements: Python/Conditional Statements.md
-  - Functions: Python/Functions.md
-  - Git: Python/Git.md
-  - Introduction to Python: Python/Introduction to Python.md
-  - Libraries: Python/Libraries.md
-  - Lists & Dictionaries: Python/Lists & Dictionaries.md
-  - Operators: Python/Operators.md
-  - Strings: Python/Strings.md
+- https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
