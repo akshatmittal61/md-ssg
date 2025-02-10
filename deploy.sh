@@ -11,6 +11,8 @@ EXCLUDES_LIST=$(cat .excluded)
 # Combine all exclusions
 EXCLUDE_LIST="$GITIGNORE_EXCLUDES $EXCLUDES_LIST"
 
+rm -rf site/ || true
+
 # Check if the Docker image exists
 if sudo docker image inspect $IMAGE_NAME > /dev/null 2>&1; then
     echo "Docker image '$IMAGE_NAME' exists. Removing it..."
@@ -31,7 +33,7 @@ fi
 mkdir -p site/
 
 echo "📦 Running the MkDocs container..."
-sudo docker run --name $CONTAINER_NAME -v "$(pwd)/site:/app/site" $IMAGE_NAME
+sudo docker run --name $CONTAINER_NAME --rm -v "$(pwd)/site:/app/site" $IMAGE_NAME
 
 # Check if the container ran successfully
 if [ $? -eq 0 ]; then

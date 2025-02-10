@@ -1,6 +1,7 @@
 .git
 .gitignore
 Personal
+Personal Space
 .excluded
 *.sh
 *.txt

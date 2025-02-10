@@ -3,7 +3,7 @@ excludedfiles=$(cat .excluded)
 
 text="$gitignorefiles $excludedfiles"
 
-delimiter="\n"
+delimiter=$'\n'
 
 string=$text$delimiter
 
@@ -15,6 +15,7 @@ done
 
 command="find . -mindepth 1 -maxdepth 1"
 
+IFS=$'\n'
 for value in ${newarray[@]}
 do
   val=$(printf "! -name \"%s" $value)
