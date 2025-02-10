@@ -21,4 +21,4 @@ export const cin = async (question: string = "") => {
 
 # References
 
-- https://nodejs.dev/en/learn/accept-input-from-the-command-line-in-nodejs/
+- [NodeJS Documentation](https://nodejs.dev/en/learn/accept-input-from-the-command-line-in-nodejs/)

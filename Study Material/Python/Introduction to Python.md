@@ -1,4 +1,3 @@
-
 # Rules
 
 - Strings can be represented both in double quotes and single quotes identically.
