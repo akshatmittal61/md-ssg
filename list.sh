@@ -1,7 +1,8 @@
 gitignorefiles=$(cat .gitignore)
 excludedfiles=$(cat .excluded)
 
-text="$gitignorefiles $excludedfiles"
+text="$gitignorefiles
+$excludedfiles"
 
 delimiter=$'\n'
 

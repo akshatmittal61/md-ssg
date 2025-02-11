@@ -7,5 +7,4 @@ Personal Space
 *.txt
 *.py
 *.yml
-docs/
 Dockerfile

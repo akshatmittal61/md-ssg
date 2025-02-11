@@ -18,7 +18,7 @@ RUN chmod +x /app/list.sh && \
     bash /app/list.sh
 
 RUN python3 -m venv .venv
-RUN . /app/.venv/bin/activate && pip install --no-cache-dir -r requirements.txt
+RUN . /app/.venv/bin/activate && pip install mkdocs-material
 
 SHELL ["/bin/bash", "-c"]
 

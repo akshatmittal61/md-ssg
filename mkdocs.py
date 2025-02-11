@@ -17,6 +17,30 @@ for ignore_file in [".gitignore", ".env"]:
                 if line and not line.startswith("#"):
                     EXCLUDE_FOLDERS.add(line.split("/")[0])
 
+# Base configuration that was previously in mkdocs.yml
+DEFAULT_CONFIG = {
+    "site_name": "My Obsidian",
+    "docs_dir": "docs/",
+    "theme": {
+        "name": "material",
+        "features": [
+            "navigation.instant",
+            "navigation.tracking",
+            "navigation.sections",
+            "navigation.indexes"
+        ]
+    },
+    "repo_url": "https://github.com/akshatmittal61/md-ssg/",
+    "repo_name": "md-ssg",
+    "use_directory_urls": True,
+    "markdown_extensions": [
+        "pymdownx.arithmatex",
+        "smarty"
+    ],
+    "extra_javascript": [
+        "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    ]
+}
 
 def build_nav(directory):
     nav = []
@@ -38,14 +62,10 @@ def build_nav(directory):
 
 nav_structure = build_nav(DOCS_DIR)
 
-config = {"site_name": "My Docs", "theme": {"name": "material"}}
-if os.path.exists("mkdocs.yml"):
-    with open("mkdocs.yml", "r") as f:
-        config = yaml.safe_load(f)
-
+config = DEFAULT_CONFIG.copy()
 config["nav"] = nav_structure
 
 with open("mkdocs.yml", "w") as f:
     yaml.dump(config, f, default_flow_style=False, sort_keys=False)
 
-print("✅ mkdocs.yml updated with nested file structure, excluding ignored folders!")
+print("✅ mkdocs.yml generated with complete configuration and nested file structure!")
